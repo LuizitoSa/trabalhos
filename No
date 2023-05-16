@@ -1,0 +1,39 @@
+
+public class No {
+     private Aluno info;
+  private  No anterior;
+   private No proximo;
+
+    public No(Aluno info) {
+        this.info = info;
+        this.anterior = null;
+        this.proximo = null;
+    }
+
+    public Aluno getInfo() {
+        return info;
+    }
+
+    public void setInfo(Aluno info) {
+        this.info = info;
+    }
+
+    public No getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(No anterior) {
+        this.anterior = anterior;
+    }
+
+    public No getProximo() {
+        return proximo;
+    }
+
+    public void setProximo(No proximo) {
+        this.proximo = proximo;
+    }
+
+   
+
+}
