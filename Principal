@@ -1,0 +1,98 @@
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import javax.swing.JFileChooser;
+
+public class Principal {
+    public static void main(String[] args) {
+         
+         
+       Disciplina dis=new Disciplina("CAA","Valerio Santos");
+        Aluno aluno =new Aluno();
+        Lista lista=new Lista();
+        
+        // Cria um objeto JFileChooser
+
+        JFileChooser fileChooser = new JFileChooser();
+
+        // Abre a janela para escolher o arquivo
+
+        int result = fileChooser.showOpenDialog(null);
+
+        // Se o usuário selecionou um arquivo
+
+        if (result == JFileChooser.APPROVE_OPTION) {
+
+            // Obtém o arquivo selecionado
+
+            File file = fileChooser.getSelectedFile();
+
+            // Cria um objeto FileReader para ler o arquivo
+
+            FileReader fileReader;
+
+            try {
+
+                fileReader = new FileReader(file);
+
+            } catch (IOException ex) {
+
+                System.out.println("Não foi possível ler o arquivo: " + ex.getMessage());
+
+                return;
+
+            }
+
+            // Cria um objeto BufferedReader para ler o conteúdo do arquivo
+
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            // Lê cada linha do arquivo e exibe no console
+
+            String linha;
+
+            try {
+
+                while ((linha = bufferedReader.readLine()) != null) {
+
+                    System.out.println(linha);
+
+                    //separar os dados por ;
+
+                    String[] sep =linha.split(";");
+
+                  
+
+                   //System.out.println(aluno);
+
+                   //ordenar notas
+                   
+
+                   //colocar aluno na lista
+                    Listar.lista(Aluno);
+                     
+
+                   
+
+                   
+
+                }
+
+                bufferedReader.close();
+
+            } catch (IOException ex) {
+
+                System.out.println("Não foi possível ler o arquivo: " + ex.getMessage());
+
+            }
+
+           
+       listar.lista();
+        }
+
+        
+
+    }
+}
