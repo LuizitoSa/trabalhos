@@ -1,0 +1,75 @@
+
+public class Lista {
+    
+    private No inicio;
+
+    private No fim;
+
+
+
+    public Lista() {
+
+        this.inicio = null;
+
+        this.fim = fim;
+
+    }
+
+    private boolean vazia(){
+
+        return(this.inicio==null||this.fim==null);
+
+    }
+
+    public void inserir(Aluno info){
+
+        
+
+       No novo= new No(info);
+
+       //verificar se a lista esta vazia para inserir no inicio
+
+       
+
+       if(vazia()){
+
+           this.inicio=novo;
+
+           this.fim=novo;
+
+       }else{
+
+           novo.setProximo(inicio);
+
+           this.inicio=novo;
+
+       }
+
+           
+
+       }
+
+         public void listar(){
+
+           if(vazia()){
+
+               System.out.println("lista vazia");
+
+               return;
+
+           }
+
+           No atual=this.inicio;
+
+           while(atual!=null){
+
+               System.out.println(atual.getInfo());
+
+               atual=atual.getProximo();
+
+           }
+
+    }
+
+
+}
